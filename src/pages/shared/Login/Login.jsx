@@ -7,11 +7,11 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="mt-36">
             <div className="text-center">
                 <h1 className="text-5xl font-bold">Login now!</h1>
             </div>
-            <form className="md:w-3/4 lg:w-1/2 mx-auto">
+            <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
