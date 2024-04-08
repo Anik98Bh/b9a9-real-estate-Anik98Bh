@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 const Root = () => {
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto font-poppins">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

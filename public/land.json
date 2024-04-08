@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Fertile Farmland",
+        "segment_name": "Agricultural land",
+        "description": "Rich and fertile farmland suitable for various crops, offering excellent agricultural potential.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "100 acres",
+        "location": "Midwest, USA",
+        "image": "https://i.ibb.co/QH9GMbM/Agricultural-land.jpg",
+        "facilities": [
+            "irrigation access",
+            "storage shed",
+            "farm equipment included"
+        ]
+    },
+    {
+        "id": 2,
+        "estate_title": "Western Style Ranch Retreat",
+        "segment_name": "ranches",
+        "description": "Sprawling ranch retreat offering vast open spaces, rolling hills, and rustic charm, ideal for outdoor enthusiasts and nature lovers.",
+        "price": "$3,500,000",
+        "status": "rent",
+        "area": "1000 acres",
+        "location": "Montana, USA",
+        "image": "https://i.ibb.co/dBk2Qhq/ranches.jpg",
+        "facilities": [
+            "barns",
+            "riding trails",
+            "fishing ponds"
+        ]
+    },
+    {
+        "id": 3,
+        "estate_title": "Organic Vegetable Farm",
+        "segment_name": "Farm",
+        "description": "Certified organic farm specializing in a wide variety of vegetables, committed to sustainable agriculture practices.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "50 acres",
+        "location": "Willamette Valley, Oregon",
+        "image": "https://i.ibb.co/fqxdzFg/Farm.jpg",
+        "facilities": [
+            "greenhouses",
+            "irrigation system",
+            "storage sheds"
+        ]
+    },
+    {
+        "id": 4,
+        "estate_title": "Award-Winning Vineyard Estate",
+        "segment_name": "Vineyard",
+        "description": "Premier vineyard estate renowned for producing award-winning wines, featuring picturesque vineyards and luxurious amenities.",
+        "price": "$5,000,000",
+        "status": "rent",
+        "area": "200 acres",
+        "location": "Napa Valley, California",
+        "image": "https://i.ibb.co/9WpdCtQ/Vineyard.jpg",
+        "facilities": ["winery", "tasting room", "luxury residence"]
+      },
+      {
+        "id": 5,
+        "estate_title": "Enchanted Forest Retreat",
+        "segment_name": "Forest",
+        "description": "Secluded forest retreat surrounded by towering trees and serene nature, offering a tranquil escape from the hustle and bustle of city life.",
+        "price": "$2,000,000",
+        "status": "sale",
+        "area": "500 acres",
+        "location": "Pacific Northwest, USA",
+        "image": "https://i.ibb.co/89mnctj/Forest.jpg",
+        "facilities": ["hiking trails", "cabin", "wildlife observation points"]
+      },
+      {
+        "id": 6,
+        "estate_title": "Tropical Plantation Paradise",
+        "segment_name": "Plantation",
+        "description": "Expansive tropical plantation featuring a variety of crops such as coffee, cocoa, and tropical fruits, set amidst lush greenery and scenic landscapes.",
+        "price": "$7,000,000",
+        "status": "rent",
+        "area": "1000 acres",
+        "location": "Hawaii, USA",
+        "image": "https://i.ibb.co/Lr5fNmM/Plantation.jpg",
+        "facilities": ["processing facilities", "worker housing", "scenic trails"]
+      }
+      
+]
