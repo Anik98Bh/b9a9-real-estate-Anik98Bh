@@ -1,8 +1,11 @@
+import Banner from "../../components/Banner/Banner";
+import Services from "../../components/services/Services";
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-3xl font-bold font-poppins">This is Home</h1>
+            <Banner></Banner>
+            <Services></Services>
         </div>
     );
 };
