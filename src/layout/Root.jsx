@@ -4,9 +4,13 @@ import Footer from "../components/footer/Footer";
 
 const Root = () => {
     return (
-        <div className="max-w-7xl mx-auto font-poppins">
-            <Navbar></Navbar>
-            <Outlet></Outlet>
+        <div className="mx-7 font-poppins">
+            <div className="h-20">
+                <Navbar></Navbar>
+            </div>
+            <div className="min-h-[calc(100vh-150px)]">
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );
