@@ -18,7 +18,7 @@ const router = createBrowserRouter([
           loader: ()=> fetch('estates.json')
         },
         {
-          path: "/details",
+          path: "/estates/:id",
           element: <Details></Details>
         },
         {

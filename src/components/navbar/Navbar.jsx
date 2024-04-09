@@ -17,8 +17,8 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/details">Details</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
+        <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
     </>
 
     return (
@@ -62,7 +62,7 @@ const Navbar = () => {
                     </div>
                         :
                         <Link to="/login">
-                            <button className="btn btn-sm btn-ghost">
+                            <button className="btn btn-sm bg-green-500 font-bold">
                                 Login
                             </button>
                         </Link>

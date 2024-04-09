@@ -24,7 +24,7 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-36">
+        <div className="mt-2">
             <div className="text-center">
                 <h1 className="text-5xl font-bold">Login now!</h1>
             </div>
