@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import 'animate.css';
+import useDocumentTitle from "../../useDocumentTitle";
 
 const UpdateProfile = () => {
+    useDocumentTitle('AB Real Estate: UpdateProfile')
     const { profileUpdate } = useContext(AuthContext);
 
     const handleProfileUpdate = (e) => {
@@ -32,7 +35,7 @@ const UpdateProfile = () => {
     // {displayName, photoURL}
 
     return (
-        <div>
+        <div className="bg-blue-50 py-9 rounded-xl animate__animated animate__zoomIn">
             <form onSubmit={handleProfileUpdate} className="md:w-3/4 lg:w-1/2 mx-auto">
                 <div>
                     <h1 className="text-5xl font-bold text-center mb-3">Update Your Profile</h1>

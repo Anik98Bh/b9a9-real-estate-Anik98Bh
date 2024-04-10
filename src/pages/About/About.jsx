@@ -1,5 +1,8 @@
+import useDocumentTitle from "../../useDocumentTitle";
 
 const About = () => {
+    useDocumentTitle('AB Real Estate: About')
+
     return (
         <div>
             <div className="text-center px-20">

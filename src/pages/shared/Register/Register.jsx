@@ -2,8 +2,11 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import 'animate.css';
+import useDocumentTitle from "../../../useDocumentTitle";
 
 const Register = () => {
+    useDocumentTitle('AB Real Estate: Register')
     const { createUser } = useContext(AuthContext);
     const [success, setSuccess] = useState('')
     const [registerError, setRegisterError] = useState('')
@@ -45,7 +48,7 @@ const Register = () => {
     }
 
     return (
-        <div className="">
+        <div className="bg-red-50 py-3 rounded-xl animate__animated animate__zoomIn">
             <div className="text-center">
                 <h1 className="text-5xl font-bold">Register now!</h1>
             </div>

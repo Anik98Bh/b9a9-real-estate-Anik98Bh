@@ -2,8 +2,11 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import 'animate.css';
+import useDocumentTitle from "../../../useDocumentTitle";
 
 const Login = () => {
+    useDocumentTitle('AB Real Estate: Login')
     const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -53,7 +56,7 @@ const Login = () => {
     }
 
     return (
-        <div className="">
+        <div className="bg-green-50 py-3 rounded-xl animate__animated animate__zoomIn">
             <div className="text-center">
                 <h1 className="text-5xl font-bold">Login now!</h1>
             </div>

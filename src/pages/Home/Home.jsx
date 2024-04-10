@@ -1,8 +1,10 @@
 import Banner from "../../components/Banner/Banner";
 import { useLoaderData } from "react-router-dom";
 import EstateCard from "../../components/services/EstateCard";
+import useDocumentTitle from "../../useDocumentTitle";
 
 const Home = () => {
+    useDocumentTitle('AB Real Estate: Home')
     const estates = useLoaderData();
     console.log(estates);
     return (

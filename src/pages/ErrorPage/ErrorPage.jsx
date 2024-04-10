@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../../useDocumentTitle";
 
 const ErrorPage = () => {
+    useDocumentTitle('AB Real Estate: ErrorPage')
     return (
         <div className="text-center mt-44">
             <h1 className="text-5xl font-extrabold mb-7">Oops!</h1>
