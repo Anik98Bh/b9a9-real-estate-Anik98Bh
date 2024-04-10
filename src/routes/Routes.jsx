@@ -6,6 +6,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/shared/Login/Login";
 import Register from "../pages/shared/Register/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
+import About from "../pages/About/About";
 
 const router = createBrowserRouter([
     {
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
         },
         {
           path: "/estates/:id",
-          element: <PrivateRoute><Details></Details></PrivateRoute>
+          element: <PrivateRoute><Details></Details></PrivateRoute>,
+          loader: ()=> fetch('/estates.json')
         },
         {
           path: "/login",
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
         {
           path: "/register",
           element: <Register></Register>
+        },
+        {
+          path: "/about",
+          element: <About></About>
         },
       ],
     },

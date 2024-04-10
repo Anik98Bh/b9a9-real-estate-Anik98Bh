@@ -1,9 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('location in login page', location)
 
 
     const handleLogin = (e) => {
@@ -17,6 +21,31 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
+
+                navigate(location?.state ? location.state : "/")
+
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+    const handleGithubLogin = () => {
+        githubLogin()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.error(error)
@@ -24,7 +53,7 @@ const Login = () => {
     }
 
     return (
-        <div className="mt-2">
+        <div className="">
             <div className="text-center">
                 <h1 className="text-5xl font-bold">Login now!</h1>
             </div>
@@ -42,7 +71,14 @@ const Login = () => {
                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn btn-primary">Login</button>
+                    <button className="btn btn-primary text-white">Login</button>
+                </div>
+                <div className="mt-4">
+                    <p className="mt-6 text-xl font-bold text-center">----------------- OR ---------------</p>
+                    <div className="flex justify-evenly mt-4">
+                        <button onClick={handleGoogleLogin} className="btn btn-secondary text-white"><FaGoogle className="text-xl"></FaGoogle> Continue with Google</button>
+                        <button onClick={handleGithubLogin} className="btn btn-primary text-white"><FaGithub className="text-2xl"></FaGithub> Continue with Github</button>
+                    </div>
                 </div>
             </form>
             <p className="text-center mt-5">New to here? Please <Link className="text-blue-600 font-bold" to="/register">Register</Link></p>
