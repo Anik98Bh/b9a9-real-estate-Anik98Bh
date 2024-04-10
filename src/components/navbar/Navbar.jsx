@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import 'animate.css';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -22,7 +23,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar rounded fixed z-10 px-5">
+        <div className="navbar rounded fixed z-10 px-5 animate__animated animate__flip">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +42,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end mr-14">
                 {
-                    user?.email ? <div className="dropdown dropdown-end">
+                    user?.email ? <div className="dropdown dropdown-end dropdown-hover">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
 

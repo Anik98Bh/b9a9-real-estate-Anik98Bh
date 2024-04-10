@@ -1,4 +1,4 @@
-
+import 'animate.css';
 
 const Banner = () => {
 
@@ -6,7 +6,7 @@ const Banner = () => {
 
         <div>
             <div className=" card-body rounded-xl mb-4 bg-[#D5F5E3] text-center">
-                <h1 className="text-4xl font-semibold text-center"><span className="font-extrabold text-5xl">Welcome</span> to the best tools, <br /> support, and data in land realty.</h1>
+                <h1 className="text-4xl font-semibold text-center animate__animated animate__bounce animate__repeat-2"><span className="font-extrabold text-5xl">Welcome</span> to the best tools, <br /> support, and data in land realty.</h1>
             </div>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">

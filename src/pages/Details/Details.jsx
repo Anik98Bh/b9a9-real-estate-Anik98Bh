@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { TbBuildingEstate } from "react-icons/tb";
 import { FaLocationDot } from "react-icons/fa6";
+import 'animate.css';
 
 const Details = () => {
 
@@ -11,7 +12,7 @@ const Details = () => {
     console.log(estate)
 
     return (
-        <div>
+        <div className="animate__animated animate__zoomIn">
             <div className=" text-center mb-5">
                 <h1 className="text-4xl font-bold">{estate.segment_name}</h1>
             </div>
