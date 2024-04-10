@@ -7,6 +7,7 @@ import Login from "../pages/shared/Login/Login";
 import Register from "../pages/shared/Register/Register";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 import About from "../pages/About/About";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         {
           path: "/about",
           element: <About></About>
+        },
+        {
+          path: "/updateProfile",
+          element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
         },
       ],
     },
