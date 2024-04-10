@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <div><Banner></Banner></div>
-            <div className="mt-10 ml-5">
+            <div className="mt-10 lg:ml-5">
                 <div>
                     <h1 className="text-5xl font-bold mb-5 text-center">Our Services</h1>
                 </div>

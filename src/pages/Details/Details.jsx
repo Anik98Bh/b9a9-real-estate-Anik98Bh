@@ -18,12 +18,12 @@ const Details = () => {
             <div className=" text-center mb-5">
                 <h1 className="text-4xl font-bold">{estate.segment_name}</h1>
             </div>
-            <div className="flex gap-5">
+            <div className=" lg:flex gap-5">
                 <div>
-                    <figure><img className="h-[500px] rounded-xl" src={estate.image} alt="" /></figure>
+                    <figure><img className="lg:h-[500px] rounded-xl" src={estate.image} alt="" /></figure>
                 </div>
 
-                <div className="w-1/2 bg-emerald-100 rounded-xl p-5">
+                <div className="lg:w-1/2 bg-emerald-100 rounded-xl p-5">
                     <h2 className="text-3xl font-semibold mb-3 text-center">{estate.estate_title}</h2>
                     <p className="px-5">{estate.description}</p>
                     <hr className="border-2 border-dashed my-3" />
@@ -34,11 +34,11 @@ const Details = () => {
                             <li>* {estate.facilities[2]}</li>
                         </ul>
                     </p>
-                    <div className="flex gap-40 mt-6 px-5">
+                    <div className="lg:flex gap-40 mt-6 px-5">
                         <p><span className="font-semibold mr-2 text-xl">Price:</span> {estate.price}</p>
                         <p><span className="font-semibold mr-2 text-xl">Status:</span> {estate.status}</p>
                     </div>
-                    <div className="flex gap-40 mt-6 px-5">
+                    <div className="lg:flex gap-40 mt-6 px-5">
                         <p className="flex items-center">
                             <TbBuildingEstate className="text-2xl mr-1"></TbBuildingEstate>
                             <span className="font-semibold mr-2 text-xl">Area: </span> {estate.area}
