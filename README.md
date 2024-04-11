@@ -11,8 +11,8 @@ Currently, two official plugins are available:
 
 ## Summery of this project
 
-<p align="center">Live Link : {use live link} <p/>
-  <h3 align="center"><a href="{use live link}">AB Real Estate</a></h3>
+<p align="center">Live Link : https://b9a9-real-estate-anik98bh.web.app/ <p/>
+  <h3 align="center"><a href="https://b9a9-real-estate-anik98bh.web.app/">AB Real Estate</a></h3>
   
   - Five Bullet Point:--
 
@@ -23,5 +23,5 @@ Currently, two official plugins are available:
   * Create Private router.
   * Create a 404 ERROR page, if user type or go wrong url then show custom ERROR.
 
-  * ----npm package name----
+  * ----Use npm package name----
   * <a href="https://animate.style/">Animate.css</a>

@@ -5,7 +5,7 @@ import useDocumentTitle from "../../useDocumentTitle";
 
 const UpdateProfile = () => {
     useDocumentTitle('AB Real Estate: UpdateProfile')
-    const { profileUpdate } = useContext(AuthContext);
+    const { profileUpdate, user } = useContext(AuthContext);
 
     const handleProfileUpdate = (e) => {
         e.preventDefault()
@@ -14,22 +14,10 @@ const UpdateProfile = () => {
 
         const displayName = form.get('name');
         const photoURL = form.get('photo');
-        const email = form.get('email');
-        console.log(displayName, photoURL, email);
+        console.log(displayName, photoURL);
 
-        // if(profileUpdate){
-        //     return
-        // }
-
-        profileUpdate({ displayName, photoURL, email })
-            .then((result) => {
-                console.log(result.user)
-                // Profile updated!
-            }).catch((error) => {
-                console.error(error)
-                // An error occurred
-                // ...
-            });
+        profileUpdate({ displayName, photoURL })
+           
     }
 
     // {displayName, photoURL}
@@ -56,7 +44,7 @@ const UpdateProfile = () => {
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                    <input type="email" name="email" placeholder="email" className="input input-bordered" defaultValue={user.email} readOnly />
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn bg-[#239B56] text-white">Save</button>

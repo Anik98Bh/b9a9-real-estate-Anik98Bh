@@ -7,13 +7,13 @@ import useDocumentTitle from "../../../useDocumentTitle";
 
 const Register = () => {
     useDocumentTitle('AB Real Estate: Register')
-    const { createUser } = useContext(AuthContext);
+    const { createUser, profileUpdate } = useContext(AuthContext);
     const [success, setSuccess] = useState('')
     const [registerError, setRegisterError] = useState('')
     const [showPassword, setShowPassword] = useState(false)
 
     const handleRegister = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         console.log(e.currentTarget);
         const form = new FormData(e.currentTarget);
 
@@ -23,8 +23,10 @@ const Register = () => {
         const password = form.get('password');
         console.log(name, photo, email, password);
 
-        setRegisterError('');
         setSuccess('');
+        setRegisterError('');
+
+       
 
         if (password.length < 6) {
             setRegisterError('Password should be at least 6 characters or longer');
@@ -35,15 +37,19 @@ const Register = () => {
             return;
         }
 
-        createUser(email, password)
-            .then(result => {
-                console.log(result.user);
-                setSuccess('User Created Successfully');
-            })
-            .catch(error => {
-                console.error(error);
-                setRegisterError('Please Give Correct Information', error.massage);
-            })
+            createUser(email, password)
+                .then(result => {
+                    console.log(result.user);
+                    setSuccess('User Created Successfully');
+                    if (result.user) {
+                        profileUpdate({ displayName: name, photoURL: photo });
+                    }
+
+                })
+                .catch(error => {
+                    console.error(error);
+                    setRegisterError('Please Give Correct Information', error.message);
+                })
 
     }
 
@@ -90,10 +96,10 @@ const Register = () => {
                 </div>
             </form>
             {
-                registerError && <p className="text-red-700 font-bold text-center">{registerError}</p>
+                registerError && <p className="text-red-700 font-bold text-center mt-2">{registerError}</p>
             }
             {
-                success && <p className="text-green-700 font-bold text-center">{success}</p>
+                success && <p className="text-green-700 font-bold text-center mt-2">{success}</p>
             }
             <p className="text-center mt-5">Already Have an Account ? Please <Link className="text-blue-600 font-bold" to="/login">Login</Link></p>
         </div>

@@ -5,6 +5,7 @@ import 'animate.css';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    console.log(user)
 
     const handleSignOut = () => {
         logOut()
@@ -19,7 +20,7 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
+        {user && <li><NavLink to="/updateProfile">Update Profile</NavLink></li>}
     </>
 
     return (

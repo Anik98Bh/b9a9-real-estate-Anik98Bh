@@ -37,10 +37,15 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
     
-    const profileUpdate=()=>{
+    const profileUpdate=({ displayName, photoURL })=>{
         setLoading(true)
-        setUser(null)
-        return updateProfile(auth.currentUser)
+        return updateProfile(auth.currentUser, {
+            displayName: displayName, photoURL: photoURL
+          }).then(() => {
+            setLoading(false)
+          }).catch((error) => {
+            console.error(error)
+          });
     }
 
     useEffect(() => {
